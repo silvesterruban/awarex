@@ -3,23 +3,31 @@ package com.awarex.dto;
 import java.util.List;
 
 public class ErrorResponse {
-    private String developerErrorMessage;
-    private List<String> errors;
-    
-    // Constructors
-    public ErrorResponse() {}
-    
-    public ErrorResponse(String developerErrorMessage, List<String> errors) {
-        this.developerErrorMessage = developerErrorMessage;
-        this.errors = errors;
+    private String message;
+    private List<String> details;
+
+    public ErrorResponse() {
     }
-    
+
+    public ErrorResponse(String message, List<String> details) {
+        this.message = message;
+        this.details = details;
+    }
+
     // Getters and Setters
-    public String getDeveloperErrorMessage() { return developerErrorMessage; }
-    public void setDeveloperErrorMessage(String developerErrorMessage) { 
-        this.developerErrorMessage = developerErrorMessage; 
+    public String getMessage() {
+        return message;
     }
-    
-    public List<String> getErrors() { return errors; }
-    public void setErrors(List<String> errors) { this.errors = errors; }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public List<String> getDetails() {
+        return details;
+    }
+
+    public void setDetails(List<String> details) {
+        this.details = details;
+    }
 }

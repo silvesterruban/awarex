@@ -1,47 +1,74 @@
 package com.awarex.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
-    @JsonProperty("user_id")
-    private Long userId;
+    @JsonProperty("id")
+    private Long id;
     
     @JsonProperty("name")
-    private String userName;
+    private String name;
     
     @JsonProperty("email")
-    private String userEmail;
+    private String email;
     
     @JsonProperty("gender")
-    private String userGender;
+    private String gender;
     
     @JsonProperty("status")
-    private String userStatus;
-    
+    private String status;
+
     // Constructors
     public User() {}
     
-    public User(Long userId, String userName, String userEmail, String userGender, String userStatus) {
-        this.userId = userId;
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userGender = userGender;
-        this.userStatus = userStatus;
+    public User(Long id, String name, String email, String gender, String status) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+        this.status = status;
     }
     
     // Getters and Setters
-    public Long getUserId() { return userId; }
-    public void setUserId(Long userId) { this.userId = userId; }
-    
-    public String getUserName() { return userName; }
-    public void setUserName(String userName) { this.userName = userName; }
-    
-    public String getUserEmail() { return userEmail; }
-    public void setUserEmail(String userEmail) { this.userEmail = userEmail; }
-    
-    public String getUserGender() { return userGender; }
-    public void setUserGender(String userGender) { this.userGender = userGender; }
-    
-    public String getUserStatus() { return userStatus; }
-    public void setUserStatus(String userStatus) { this.userStatus = userStatus; }
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
